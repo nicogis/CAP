@@ -21,7 +21,7 @@
         },
         "CAP": {
           "type": "string",
-          "description": "Codice di avviamento postale"
+          "description": "Codice di avviamento postale",
           "pattern": "^[0-9]{5}$"
         }
       }
