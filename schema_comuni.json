@@ -1,0 +1,38 @@
+{
+  "$id": "https://www.nicogis.eu/schema/comuni.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Comuni",
+  "type": "object",
+  "properties": {
+    "comuni": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/comuni" }
+    }
+  },
+  "$defs": {
+    "comuni": {
+      "type": "object",
+      "required": [ "ISTAT", "Nome", "SiglaProvincia","Capoluogo" ],
+      "properties": {
+        "ISTAT": {
+          "type": "string",
+          "description": "Istat del comune",
+          "pattern": "^[0-9]{6}$"
+        },
+        "Nome": {
+          "type": "string",
+          "description": "Nome del comune"
+        },
+        "SiglaProvincia": {
+          "type": "string",
+          "description": "Sigla provincia del comune",
+          "pattern": "^[A-Z]{2}$"
+        },
+        "Capoluogo": {
+          "type": "boolean",
+          "description": "E' capoluogo"
+        }
+      }
+    }
+  }
+}

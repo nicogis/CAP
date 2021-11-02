@@ -1,0 +1,30 @@
+{
+  "$id": "https://www.nicogis.eu/schema/cap_comuni.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "CAP - comuni",
+  "type": "object",
+  "properties": {
+    "comuni": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/cap_comuni" }
+    }
+  },
+  "$defs": {
+    "cap_comuni": {
+      "type": "object",
+      "required": [ "ISTAT", "CAP" ],
+      "properties": {
+        "ISTAT": {
+          "type": "string",
+          "description": "Istat del comune",
+          "pattern": "^[0-9]{6}$"
+        },
+        "CAP": {
+          "type": "string",
+          "description": "Codice di avviamento postale"
+          "pattern": "^[0-9]{5}$"
+        }
+      }
+    }
+  }
+}
