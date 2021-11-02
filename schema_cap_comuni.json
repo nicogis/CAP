@@ -4,7 +4,7 @@
   "description": "CAP - comuni",
   "type": "object",
   "properties": {
-    "comuni": {
+    "cap_comuni": {
       "type": "array",
       "items": { "$ref": "#/$defs/cap_comuni" }
     }
