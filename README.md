@@ -1,12 +1,10 @@
 # CAP
 Codici di avviamento postale e comuni
 
-La struttura dei json è:
-
+Json CAP-Comune con schema:
 - cap_comuni.json
+- schema_cap_comuni.json
 
-[{"ISTAT":"XXXXXX","CAP":"YYYYY"}, ...]
-
+Json Comune con schema:
 - comuni.json
-
-[{"ISTAT":"XXXXXX","Nome":"nome comune", "SiglaProvincia": "ZZ", Capoluogo: boolean}, ...]
+- schema_comuni.json
