@@ -21,7 +21,8 @@
         },
         "Nome": {
           "type": "string",
-          "description": "Nome del comune"
+          "description": "Nome del comune",
+          "minLength": 2
         },
         "SiglaProvincia": {
           "type": "string",
