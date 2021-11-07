@@ -1,5 +1,5 @@
 {
-  "$id": "https://www.nicogis.it/schema/comuni.json",
+  "$id": "https://github.nicogis.it/CAP/comuni.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "Comuni",
   "type": "object",
