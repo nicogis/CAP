@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/elenco-comuni-attuali.schema.json",
+  "title": "Elenco Comuni Attuali Dataset",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "sourceFileName",
+    "sourceType",
+    "items"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "sourceFileName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sourceType": {
+      "type": "string",
+      "const": "ElencoComuniAttuali"
+    },
+    "extractedFromFileDate": {
+      "type": ["string", "null"],
+      "format": "date"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/comuneAttualeRecord"
+      }
+    }
+  },
+  "$defs": {
+    "comuneAttualeRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "codiceNazionale",
+        "denominazioneItaliana",
+        "codiceIstat"
+      ],
+      "properties": {
+        "codiceNazionale": {
+          "type": "string",
+          "pattern": "^[A-Z][0-9]{3}$"
+        },
+        "siglaProvincia": {
+          "type": ["string", "null"],
+          "pattern": "^[A-Z]{2}$"
+        },
+        "denominazioneItaliana": {
+          "type": "string",
+          "minLength": 1
+        },
+        "denominazioneEstera": {
+          "type": ["string", "null"]
+        },
+        "codiceCatastale": {
+          "anyOf": [
+    {
+      "type": "null"
+    },
+    {
+      "type": "string",
+      "pattern": "^[A-Z0-9]{4}$"
+    }
+  ]
+        },
+        "ufficioCatastoTerreni": {
+          "type": ["string", "null"]
+        },
+        "ufficioCatastoFabbricati": {
+          "type": ["string", "null"]
+        },
+        "codiceConservatoria": {
+          "type": ["string", "null"]
+        },
+        "codiceIstat": {
+          "type": "string",
+          "pattern": "^[0-9]{6}$"
+        },
+        "dataCostituzione": {
+          "type": ["string", "null"],
+          "format": "date"
+        },
+        "attesaVctTerritorio": {
+          "type": ["string", "null"]
+        },
+        "attesaVctFabbricati": {
+          "type": ["string", "null"]
+        }
+      }
+    }
+  }
+}
