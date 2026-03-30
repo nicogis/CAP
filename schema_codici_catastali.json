@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.local/schemas/elenco-comuni-attuali.schema.json",
+  "$id": "https://cap.nicogis.it/schema_codici_catastali.json",
   "title": "Elenco Comuni Attuali Dataset",
   "type": "object",
   "additionalProperties": false,
