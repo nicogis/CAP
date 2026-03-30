@@ -10,5 +10,5 @@ Json Comune con schema:
 - [schema_comuni.json](https://cap.nicogis.it/schema_comuni.json)
 
 Json Codici catastali con schema:
-- [comuni.json](https://cap.nicogis.it/codici_catastali.json)
-- [schema_comuni.json](https://cap.nicogis.it/schema_codici_catastali.json)
+- [codici_catastali.json](https://cap.nicogis.it/codici_catastali.json)
+- [schema_codici_catastali.json](https://cap.nicogis.it/schema_codici_catastali.json)
